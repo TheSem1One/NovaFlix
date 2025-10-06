@@ -1,11 +1,11 @@
 ﻿namespace NovaFlix.Domain.Entities
 {
-    public class Films
+    public class Film
     {
         public Guid Id { get; set; }
 
         public string Title { get; set; }
-        
+
         public string OriginalTitle { get; set; }
 
         public string ImageUrl { get; set; }

@@ -1,4 +1,6 @@
-﻿namespace NovaFlix.Domain.Entities
+﻿using NovaFlix.Domain.Enums;
+
+namespace NovaFlix.Domain.Entities
 {
     public class User
     {
@@ -11,5 +13,7 @@
         public string Password { get; set; }
 
         public string ImageUrl { get; set; }
+
+        public UserRole Role = UserRole.User;
     }
 }
