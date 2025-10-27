@@ -18,6 +18,8 @@ namespace NovaFlix.Api
 
             builder.Services.Configure<DatabaseConnection>(
                 builder.Configuration.GetSection(DatabaseConnection.SectionName));
+            builder.Services.Configure<TokenOptions>(
+                builder.Configuration.GetSection(TokenOptions.SectionName));
 
             builder.Services.AddDbContext<DatabaseContext>(opts =>
                 opts.UseNpgsql(
