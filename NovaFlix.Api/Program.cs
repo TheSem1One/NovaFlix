@@ -1,8 +1,14 @@
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using NovaFlix.Api.Extensions;
+using NovaFlix.Api.Transformers;
+using NovaFlix.Application.Common.Interfaces;
+using NovaFlix.Application.Features.Films;
+using NovaFlix.Infrastructure.Helper;
 using NovaFlix.Infrastructure.Options;
 using NovaFlix.Infrastructure.Persistance;
+using NovaFlix.Infrastructure.Services;
 
 namespace NovaFlix.Api
 {
@@ -27,6 +33,17 @@ namespace NovaFlix.Api
                 )
             );
 
+            builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddAuth(builder.Configuration);
+
+            // DI Ijections
+            builder.Services.AddScoped<IFilmsService, FilmsService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddTransient<Encrypt>();
+            builder.Services.AddTransient<TokenManipulation>();
+
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateFilmCommand).Assembly));
             builder.Services.AddControllers();
 
             builder.Services.AddCors(o => o.AddPolicy("AllowAny", corsPolicyBuilder =>
@@ -38,7 +55,11 @@ namespace NovaFlix.Api
             }));
 
             builder.Services.AddOpenApi();
-
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new TimeOnlyJsonConverter());
+                });
 
             var app = builder.Build();
 
@@ -53,6 +74,7 @@ namespace NovaFlix.Api
             app.UseCors("AllowAny");
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

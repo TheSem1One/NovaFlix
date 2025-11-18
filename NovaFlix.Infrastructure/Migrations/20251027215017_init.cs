@@ -45,7 +45,7 @@ namespace NovaFlix.Infrastructure.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false),
                     Password = table.Column<string>(type: "text", nullable: false),
-                    ImageUrl = table.Column<string>(type: "text", nullable: false),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
                     Role = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>

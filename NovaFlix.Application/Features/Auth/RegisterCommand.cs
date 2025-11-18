@@ -5,7 +5,8 @@ using NovaFlix.Application.Features.Auth.Dto;
 
 namespace NovaFlix.Application.Features.Auth
 {
-    public record RegisterCommand(string Email, string Name, string Password) : IRequest<TokenDto>;
+    public record RegisterCommand(string Email, string Name, 
+        string Password, string ConfirmPassword) : IRequest<TokenDto>;
 
     public class RegisterCommandHandler(IAuthService auth) : IRequestHandler<RegisterCommand, TokenDto>
     {

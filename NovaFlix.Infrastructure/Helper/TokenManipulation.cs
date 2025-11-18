@@ -23,13 +23,13 @@ namespace NovaFlix.Infrastructure.Helper
             );
 
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
-            return new TokenDto(){AcesToken = jwt};
+            return new TokenDto() { AcesToken = jwt };
         }
         public List<Claim> GetClaims(UserTokenDto dto)
         {
             var claims = new List<Claim>
             {
-                new Claim("Username", dto.Username),
+                new Claim("Name", dto.Name),
                 new Claim("Id", dto.Id.ToString()),
                 new Claim("Role", dto.Role.ToString())
             };

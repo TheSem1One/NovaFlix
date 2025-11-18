@@ -1,9 +1,7 @@
-﻿namespace NovaFlix.Domain.Entities
+﻿namespace NovaFlix.Application.Features.Films.Dto
 {
-    public class Film
+    public class CreateFilmDto
     {
-        public Guid Id { get; set; }
-
         public string Title { get; set; }
 
         public string OriginalTitle { get; set; }
@@ -24,7 +22,7 @@
 
         public string Studio { get; set; }
 
-        public int View { get; set; } = 0;
+        public int View { get; set; }
 
         public string FilmDescription { get; set; }
 

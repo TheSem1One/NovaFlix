@@ -12,7 +12,7 @@ namespace NovaFlix.Domain.Entities
 
         public string Password { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
         public UserRole Role = UserRole.User;
     }
