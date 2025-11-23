@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
 using NovaFlix.Api.Extensions;
 using NovaFlix.Api.Transformers;
 using NovaFlix.Application.Common.Interfaces;
 using NovaFlix.Application.Features.Films;
+using NovaFlix.Application.Features.UserContext;
+using NovaFlix.Infrastructure.Context;
 using NovaFlix.Infrastructure.Helper;
 using NovaFlix.Infrastructure.Options;
 using NovaFlix.Infrastructure.Persistance;
@@ -40,7 +43,12 @@ namespace NovaFlix.Api
             // DI Ijections
             builder.Services.AddScoped<IFilmsService, FilmsService>();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IProfileService, ProfileService>();
+            builder.Services.AddScoped<IUserContext, UserContext>();
+            builder.Services.AddScoped<UpdateUser>();
+
             builder.Services.AddTransient<Encrypt>();
+            builder.Services.AddTransient<ImageHelper>();
             builder.Services.AddTransient<TokenManipulation>();
 
             builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateFilmCommand).Assembly));
@@ -63,7 +71,7 @@ namespace NovaFlix.Api
 
             var app = builder.Build();
 
- 
+
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
@@ -72,7 +80,22 @@ namespace NovaFlix.Api
             app.UseSwaggerUI();
 
             app.UseCors("AllowAny");
+            var contentPath = builder.Environment.ContentRootPath;
+            var path = Path.Combine(contentPath, "Uploads");
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            app.UseStaticFiles(
+                new StaticFileOptions
+                {
+                    FileProvider = new PhysicalFileProvider(
+                        Path.Combine(builder.Environment.ContentRootPath,
+                            "Uploads")),
+                    RequestPath = "/Resources"
+                });
             app.UseHttpsRedirection();
+
 
             app.UseAuthentication();
             app.UseAuthorization();

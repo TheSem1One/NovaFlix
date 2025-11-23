@@ -1,0 +1,16 @@
+C:\PetProject\NovaFlix\NovaFlix.Application\bin\Debug\net9.0\NovaFlix.Application.deps.json
+C:\PetProject\NovaFlix\NovaFlix.Application\bin\Debug\net9.0\NovaFlix.Application.dll
+C:\PetProject\NovaFlix\NovaFlix.Application\bin\Debug\net9.0\NovaFlix.Application.pdb
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.AssemblyInfoInputs.cache
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.AssemblyInfo.cs
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.csproj.CoreCompileInputs.cache
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.sourcelink.json
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.dll
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\refint\NovaFlix.Application.dll
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.pdb
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\ref\NovaFlix.Application.dll
+C:\PetProject\NovaFlix\NovaFlix.Application\bin\Debug\net9.0\NovaFlix.Domain.dll
+C:\PetProject\NovaFlix\NovaFlix.Application\bin\Debug\net9.0\NovaFlix.Domain.pdb
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.Application.csproj.AssemblyReference.cache
+C:\PetProject\NovaFlix\NovaFlix.Application\obj\Debug\net9.0\NovaFlix.27C2B66E.Up2Date
