@@ -1,0 +1,12 @@
+C:\PetProject\NovaFlix\NovaFlix.Domain\bin\Debug\net9.0\NovaFlix.Domain.deps.json
+C:\PetProject\NovaFlix\NovaFlix.Domain\bin\Debug\net9.0\NovaFlix.Domain.dll
+C:\PetProject\NovaFlix\NovaFlix.Domain\bin\Debug\net9.0\NovaFlix.Domain.pdb
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\NovaFlix.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\NovaFlix.Domain.AssemblyInfoInputs.cache
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\NovaFlix.Domain.AssemblyInfo.cs
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\NovaFlix.Domain.csproj.CoreCompileInputs.cache
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\NovaFlix.Domain.sourcelink.json
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\NovaFlix.Domain.dll
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\refint\NovaFlix.Domain.dll
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\NovaFlix.Domain.pdb
+C:\PetProject\NovaFlix\NovaFlix.Domain\obj\Debug\net9.0\ref\NovaFlix.Domain.dll

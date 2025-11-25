@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "NovaFlix.Domain/1.0.0": {
+        "runtime": {
+          "NovaFlix.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NovaFlix.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
