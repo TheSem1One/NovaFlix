@@ -5,6 +5,13 @@ namespace NovaFlix.Api.Transformers
 {
     public class TimeOnlyJsonConverter : JsonConverter<TimeOnly>
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="typeToConvert"></param>
+        /// <param name="options"></param>
+        /// <returns></returns>
         public override TimeOnly Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             return TimeOnly.Parse(reader.GetString()!);
