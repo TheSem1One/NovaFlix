@@ -22,5 +22,6 @@ namespace NovaFlix.Api.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
+
     }
 }
