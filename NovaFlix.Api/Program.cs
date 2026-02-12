@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
 using NovaFlix.Api.Extensions;
@@ -70,6 +71,13 @@ namespace NovaFlix.Api
                 });
 
             var app = builder.Build();
+
+            // Apply pending EF Core migrations at startup
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<DatabaseContext>();
+                context.Database.Migrate();
+            }
 
 
             if (app.Environment.IsDevelopment())
